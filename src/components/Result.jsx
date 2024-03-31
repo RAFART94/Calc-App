@@ -2,12 +2,11 @@
 import React from "react"
 
 // generación de la función del componente (función flecha o arrow function)
-const Result = (props) => {
-    debugger
-    console.log('Renderización de Result', props.value)
+const Result = ({ value }) => {
+    console.log('Renderización de Result', value)
     return (
         <div className="result">
-            {props.value}
+            {value}
         </div>
     )
 }
