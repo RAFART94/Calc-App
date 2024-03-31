@@ -1,17 +1,23 @@
 // importación
 import React from "react"
+import Button from "./components/Button"
 import Result from "./components/Result"
 import './App.css'
 
 // generación de la función del componente (función flecha o arrow function)
+//las funciones flechas si tienen un solo parametro, no hace facta parentesis, pero en caso de tener más de 1 si
 const App = () => {
+
+    const clickHandlerFunction = text => {
+        console.log('Button.clickHandler', text)
+    }
     // lo que ejecuta la función
     console.log('Renderización de App')//para que aparezaca en Inspeccionar>Consola
     return (
     <main className="react-calculator">
         <Result value={undefined}/>
         <div className="numbers">
-            <button>1</button>
+            <Button text='1' clickHandler={clickHandlerFunction}/>
             <button>2</button>
             <button>3</button>
             <button>4</button>
