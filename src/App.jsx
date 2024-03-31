@@ -9,7 +9,7 @@ const App = () => {
     console.log('Renderización de App')//para que aparezaca en Inspeccionar>Consola
     return (
     <main className="react-calculator">
-        <Result value={'0'}/>
+        <Result value={undefined}/>
         <div className="numbers">
             <button>1</button>
             <button>2</button>
