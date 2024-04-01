@@ -46,7 +46,7 @@ const App = () => {
             }}
             onClickEqual={equal => {
                 console.log('Equal:', equal)
-                setStack(`${stack}${equal}`)
+                setStack(eval(stack).toString())
             }}/>
     </main>)
 }
