@@ -8,12 +8,12 @@ const MathOperations = ({onClickOperation, onClickEqual}) => (
         <Button text='-' clickHandler={onClickOperation} />
         <Button text='*' clickHandler={onClickOperation} />
         <Button text='/' clickHandler={onClickOperation} />
-        <Button text='=' clickHandler={onClickEqual}></Button>
+        <Button text='=' clickHandler={onClickEqual} />
     </section>
 )
 
 MathOperations.propTypes = {
-    onClickOperation: PropTypes.func.isRequired, 
+    onClickOperation: PropTypes.func.isRequired,   
     onClickEqual: PropTypes.func.isRequired
 }
 
