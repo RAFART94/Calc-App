@@ -1,6 +1,7 @@
 /* eslint no-eval: 0 */
 // importación
 import React, { useState } from "react"
+import words from 'lodash.words'
 import Functions from "./components/Functions"
 import Numbers from "./components/Numbers"
 import MathOperations from "./components/MathOperations"
@@ -18,8 +19,10 @@ const App = () => {
     //[xxx], [setxxx]
     const [stack, setStack] = useState('')
 
+    const items = words(stack, /[^-^+^*^/]+/g)
     // lo que ejecuta la función
-    console.log('Renderización de App')//para que aparezaca en Inspeccionar>Consola
+    console.log('Renderización de App', items)//para que aparezaca en Inspeccionar>Consola
+    
     return (
     <main className="react-calculator">
         <Result value={stack}/>
