@@ -11,23 +11,20 @@ import './App.css'
 // generación de la función del componente (función flecha o arrow function)
 //las funciones flechas si tienen un solo parametro, no hace facta parentesis, pero en caso de tener más de 1 si
 const App = () => {
-    const arrayTextoFuncionModificaTexto = useState('hola')
-
-    //arrayTextoFuncionModificaTexto => ['hola', funcion]
-
+    //array destructuring
     //1er posición: valor (que inicialmente es el valor por defeto)
-    const texto = arrayTextoFuncionModificaTexto[0]
-
     //2da posición: función que me va a permitir modificar el valor por defecto
-    const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
-    
+    //[xxx], [setxxx]
+    const [stack, setStack] = useState('')
+
     // lo que ejecuta la función
     console.log('Renderización de App')//para que aparezaca en Inspeccionar>Consola
     return (
     <main className="react-calculator">
-        <Result value={undefined}/>
+        <Result value={stack}/>
         <Numbers onClickNumber={number => {
             console.log("Click en number", number)
+            setStack(number)
         }}/>
         <Functions 
             onContentClear={() =>
