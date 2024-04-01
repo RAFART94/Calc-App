@@ -32,9 +32,11 @@ const App = () => {
                 setStack('')
             }}
             onDelete={() => {
-                const newStack = stack.substring(0, stack.length - 1)
-                console.log('onDelete', newStack)
-                setStack(newStack)
+                if (stack.length > 0) {
+                    const newStack = stack.substring(0, stack.length - 1)
+                    console.log('onDelete', newStack)
+                    setStack(newStack)
+                }
             }}/>
             
         <MathOperations 
