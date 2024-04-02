@@ -1,18 +1,13 @@
-//importar React
+
 import React from "react"
 import PropTypes from "prop-types"
 import './Button.css'
 
-//componente funcional
-//Cuando el cuerpo de la función solo tenemos 1 return y se encuentre al inicio de la misma. Cambiamos la llaves por parentesis y eleminiamos la palabra 'return'
-//type = button-long-text
 const Button = ({ type, text, clickHandler }) => (
-        //Cuando el cuerpo de la función solo tiene 1 línea, podemos eliminar las llaves que rodean el cuerpo de la función
         <button className={type} onClick={() => clickHandler(text)}>
             <span>{text}</span>
         </button>
 )
-
 
 Button.propTypes = {
     type: PropTypes.string,
@@ -20,5 +15,4 @@ Button.propTypes = {
     clickHandler: PropTypes.func.isRequired
 }
 
-//exportar funcion
 export default Button
